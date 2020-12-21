@@ -1,48 +1,28 @@
+<!--
+ * @Description: 
+ * @Author: lfy
+ * @Date: 2020-12-09 15:10:23
+ * @LastEditTime: 2020-12-21 13:28:05
+ * @LastEditors: lfy
+-->
 <template>
   <div class="container">
-    <column-list :list="list"></column-list>
+    <router-view ref="global"></router-view>
   </div>
 </template>
 
 <script lang="ts">
 import { ref } from "vue"
-import 'bootstrap/dist/css/bootstrap.min.css'
-import ColumnList, { ColumnProps } from './components/ColumnList.vue'
-const testData: ColumnProps[] = [
-  {
-    id:1,
-    title: 'sdfsdf',
-    description: 'sdfsddgalkdjlgsdlfsdfasdf',
-    avatar: ''
-  },
-  {
-    id:2,
-    title: 'sdfsdf',
-    description: 'sdfsddgalkdjlgsdlfsdfasdf',
-    avatar: ''
-  },
-  {
-    id:3,
-    title: 'sdfsdf',
-    description: 'sdfsddgalkdjlgsdlfsdfasdf',
-    avatar: ''
-  },
-  {
-    id:4,
-    title: 'sdfsdf',
-    description: 'sdfsddgalkdjlgsdlfsdfasdf',
-    avatar: ''
-  }
-]
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import ColumnList, { ColumnProps } from './components/ColumnList.vue'
+
 
 export default {
   components: {
-    ColumnList
   },
   name: "App",
   setup() {
     return {
-      list: testData
     };
   },
 };
