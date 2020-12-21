@@ -2,11 +2,19 @@
  * @Description: 
  * @Author: lfy
  * @Date: 2020-12-21 11:18:40
- * @LastEditTime: 2020-12-21 11:38:36
+ * @LastEditTime: 2020-12-21 18:36:27
  * @LastEditors: lfy
  */
 {
     "plugins": [
+      [
+        "import",
+        { 
+          "libraryName": "ant-design-vue", 
+          "libraryDirectory": "es", 
+          "style": true //使用less 
+        }
+      ],
       [
         "import",
         {
