@@ -6,7 +6,7 @@
 import axios from 'axios'
 import { defineComponent } from 'vue'
 
-export default defineComponent({
+export default defineComponent({  
   async setup(){
     console.log("############")
     const rawData = await axios.get('https://dog.ceo/api/breeds/image/random')
