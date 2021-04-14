@@ -13,7 +13,6 @@
 
 <script lang="ts">
 import { ref } from "vue"
-// import 'bootstrap/dist/css/bootstrap.min.css'
 // import ColumnList, { ColumnProps } from './components/ColumnList.vue'
 
 

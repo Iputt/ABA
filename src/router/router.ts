@@ -29,6 +29,21 @@ const router = createRouter({
           name: 'ps-grid',
           component: () => import("../views/ps-grid.vue"),
         },
+        {
+          path: "/ps-avatar",
+          name: 'ps-avatar',
+          component: () => import("../components/general/ps-avatar/ast/ps-avatar.vue"),
+        },
+        {
+          path: "/ps-badge",
+          name: 'ps-badge',
+          component: () => import("../components/general/ps-badge/ast/ps-badge.vue"),
+        },
+        {
+          path: "/ps-calendar",
+          name: 'ps-calendar',
+          component: () => import("../components/general/ps-calendar/ast/ps-calendar.vue"),
+        },
     ]
 })
 

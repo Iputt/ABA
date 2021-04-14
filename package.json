@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "precommit": "eslint src/**/*.js"
+    "precommit": "eslint src/**/*.js",
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "vue-styleguidist build"
   },
   "husky": {
     "hooks": {
@@ -43,6 +45,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "husky": "^6.0.0",
-    "typescript": "~3.9.3"
+    "typescript": "~3.9.3",
+    "vue-styleguidist": "^4.0.0-beta.19"
   }
 }

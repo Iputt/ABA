@@ -7,13 +7,13 @@
 -->
 <template>
   <div class="hello">
-    <div v-for="(item, index) in source" :key="index">
+    <!-- <div v-for="(item, index) in source" :key="index">
       <transition name = "fade">
         <div v-show = "show">
             <div v-for="sent in item.sentence" :key="sent" v-bind:style = "styleobj">{{sent}}</div>
         </div>
     </transition>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -28,14 +28,6 @@ export default defineComponent({
   setup(props){
     const sources = [
       {
-        age:'十九岁',
-        sentence:[
-          '我要做回那个美丽的姑娘',
-          '要早早的睡',
-          '爱自己七分爱他人三分',
-          '变得更优秀',
-          '遇见更好的他...'
-        ],
      
       }
     ]

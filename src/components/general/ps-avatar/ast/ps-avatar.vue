@@ -108,10 +108,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-#components-avatar-demo-badge .ant-avatar {
-  margin-top: 0;
-  margin-right: 0;
-}
-
+  #components-avatar-demo-badge .ant-avatar {
+    margin-top: 0;
+    margin-right: 0;
+  }
 </style>>
