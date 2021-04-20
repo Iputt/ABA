@@ -19,4 +19,26 @@ module.exports = {
     },
     plugins: [],
   },
+  devServer: {
+    port: 9000,
+    open: true,
+    // 设置代理，使客户端通过服务器的方式与服务器通信，解决跨域问题
+    proxy: {
+      "/prsis2021": {
+        target: "http://localhost:2021", //源地址
+        changeOrigin: true, //改变源
+        pathRewrite: {
+          "^/prsis2021": "http://localhost:2021" //路径重写
+        }
+      },
+      "/mock": {
+        //prsis mockserver
+        target: "http://localhost:3000", //源地址
+        changeOrigin: true, //改变源
+        pathRewrite: {
+          "^/mock": "http://localhost:3000" //路径重写
+        }
+      }
+    }
+  },
 };
