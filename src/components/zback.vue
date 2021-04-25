@@ -22,8 +22,8 @@
 
 <script lang="ts">
 import { ref, computed, onMounted, onUnmounted, watch, onErrorCaptured } from "vue";
-import useMousePosition from "./hooks/useMousePosition";
-import useURLLoader from "./hooks/useURLLoader";
+import useMousePosition from "../hooks/useMousePosition";
+import useURLLoader from "../hooks/useURLLoader";
 import Modal from "./components/Modal.vue";
 // import AsyncShow from './components/AsyncShow.vue'
 import DogShow from './components/DogShow.vue'

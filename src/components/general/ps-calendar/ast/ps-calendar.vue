@@ -8,14 +8,11 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "",
+  name: "ps-calendar",
   components: {},
   props: {},
   setup() {
-
-//  return {
-
-//  }
+    return {}
   }
 })
 </script>

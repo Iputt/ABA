@@ -5,23 +5,23 @@
  * @LastEditTime: 2020-12-21 18:36:27
  * @LastEditors: lfy
  */
-{
-    "plugins": [
-      [
-        "import",
-        { 
-          "libraryName": "ant-design-vue", 
-          "libraryDirectory": "es", 
-          "style": true //使用less 
-        }
-      ],
-      [
-        "import",
-        {
-          "libraryName": "vxe-table",
-          "style": true // 样式是否也按需加载
-        }
-      ]
-    ]
-  }
+// {
+//     // "plugins": [
+//     //   [
+//     //     "import",
+//     //     { 
+//     //       "libraryName": "ant-design-vue", 
+//     //       "libraryDirectory": "es", 
+//     //       "style": true //使用less 
+//     //     }
+//     //   ],
+//     //   [
+//     //     "import",
+//     //     {
+//     //       "libraryName": "vxe-table",
+//     //       "style": true // 样式是否也按需加载
+//     //     }
+//     //   ]
+//     // ]
+//   }
 
