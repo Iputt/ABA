@@ -25,6 +25,11 @@ const router = createRouter({
           component: () => import("../views/a_table.vue"),
         },
         {
+          path: "/UserList",
+          name: 'UserList',
+          component: () => import("../views/UserList.vue"),
+        },
+        {
           path: "/ps-grid",
           name: 'ps-grid',
           component: () => import("../views/ps-grid.vue"),

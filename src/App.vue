@@ -8,6 +8,7 @@
 <template>
   <div class="container">
     <router-view ref="global"></router-view>
+    <router-link to="/UserList">ttttttttttttttttttttttttt</router-link>
   </div>
 </template>
 

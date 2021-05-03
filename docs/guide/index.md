@@ -62,8 +62,6 @@ return 1 + 1;
 ```
 </CodeRun>
 
-<a-button type="primary" >Display normal message</a-button>
-
 <CodeRun auto editable>
 ```vue
 <template>
