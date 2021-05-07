@@ -49,6 +49,11 @@ const router = createRouter({
           name: 'ps-calendar',
           component: () => import("../components/general/ps-calendar/ast/ps-calendar.vue"),
         },
+        {
+          path: "/ps-layout",
+          name: 'ps-layout',
+          component: () => import("../components/general/ps-layout/ast/ps-layout.vue"),
+        },
     ]
 })
 

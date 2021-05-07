@@ -6,19 +6,19 @@
  * @LastEditors: lfy
 -->
 <template>
-  <div class="container">
-    <router-view ref="global"></router-view>
-    <router-link to="/UserList">ttttttttttttttttttttttttt</router-link>
-  </div>
+  <!-- <div class="container">
+    <router-view ref="global"></router-view> 
+  </div> -->
+  <ps-layout />
 </template>
 
 <script lang="ts">
 import { ref } from "vue"
-// import ColumnList, { ColumnProps } from './components/ColumnList.vue'
-
-
+import PsLayout from "./components/general/ps-layout/ast/ps-layout.vue"
+// import ColumnList, { ColumnProps } from './components/ColumnList.vue' 
 export default {
   components: {
+    PsLayout
   },
   name: "App",
   setup() {

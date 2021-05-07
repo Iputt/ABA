@@ -6,6 +6,7 @@
  * @LastEditors: lfy
 -->
 <template>
+  <div>sdfsdfasfsdfasegsegsdfsdfdsfsdfd</div>
   <vxe-grid v-bind="gridOptions">
     <template #toolbar_buttons>
       <vxe-button @click="gridOptions.align = 'left'">居左</vxe-button>
