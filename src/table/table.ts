@@ -2,12 +2,12 @@
  * @Description: vxe-table 全局配置
  * @Author: lfy
  * @Date: 2020-12-21 17:27:36
- * @LastEditTime: 2020-12-21 18:28:47
- * @LastEditors: lfy
+ * @LastEditTime: 2021-05-19 17:40:04
+ * @LastEditors: Please set LastEditors
  */
 import XEUtils from 'xe-utils'
 import VXETable from 'vxe-table'
-import i18n from '@/assets/i18n'
+import i18n from '../assets/i18n'
 
 VXETable.setup({
   // 对组件内置的提示语进行国际化翻译

@@ -1,17 +1,18 @@
 /*
- * @Description: aba 入口文件
- * @Author: lfy
- * @Date: 2020-12-09 15:10:23
- * @LastEditTime: 2020-12-21 17:31:57
- * @LastEditors: lfy
+ * @Author: your name
+ * @Date: 2021-04-19 16:55:19
+ * @LastEditTime: 2021-05-19 17:38:18
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \ABA\src\main.ts
  */
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/router'
 
 import Antd from 'ant-design-vue'
-import VXETable from '@/table/table'
-import i18n from '@/assets/i18n'
+import VXETable from './table/table'
+import i18n from './assets/i18n'
 
 import 'ant-design-vue/dist/antd.css'
 import 'vxe-table/lib/style.css'
