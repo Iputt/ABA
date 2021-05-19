@@ -45,6 +45,18 @@
 // "serve": "vue-cli-service serve",
     // "build": "vue-cli-service build",
     // "lint": "vue-cli-service lint",
+    // "husky": {
+    //   "hooks": {
+    //     "pre-commit": "lint-staged"
+    //   }
+    // },
+    // "lint-staged": {
+    //   "src/**/*.{js,vue}": [
+    //     "prettier --write",
+    //     "eslint --cache --fix",
+    //     "git add"
+    //   ]
+    // },
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 

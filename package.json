@@ -12,18 +12,6 @@
     "bdoc": "vitepress build docs",
     "sdoc": "vitepress serve docs"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,vue}": [
-      "prettier --write",
-      "eslint --cache --fix",
-      "git add"
-    ]
-  },
   "dependencies": {
     "ant-design-vue": "^2.1.2",
     "axios": "^0.21.0",
