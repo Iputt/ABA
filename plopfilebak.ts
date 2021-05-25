@@ -7,3 +7,8 @@ export default function (plop: NodePlopAPI){
   //plop generator code
   plop.setGenerator('controller', routerGenerator)
 }
+// const componentGenerator = require('./plop-templates/component/prompt');
+
+// module.exports = function (plop) {
+//     plop.setGenerator('router', componentGenerator);
+// };
