@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-04-19 16:58:33
+ * @LastEditTime: 2021-05-21 12:04:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \ABA\vite.config.ts
+ */
 // const path = require("path");
 // //path.join(__dirname)设置绝对路径
 // const resolve = dir => path.join(__dirname, dir);
@@ -57,10 +65,17 @@
     //     "git add"
     //   ]
     // },
+import * as path from 'path';
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()]
+  plugins: [vue()],
+  resolve: {
+    alias: {
+        // 配置别名
+        '@': path.resolve(__dirname, './src')
+    }
+  }
 })

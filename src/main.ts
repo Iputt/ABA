@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-04-19 16:55:19
- * @LastEditTime: 2021-05-19 17:38:18
- * @LastEditors: your name
+ * @LastEditTime: 2021-05-21 12:52:19
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ABA\src\main.ts
  */
@@ -13,6 +13,9 @@ import router from './router/router'
 import Antd from 'ant-design-vue'
 import VXETable from './table/table'
 import i18n from './assets/i18n'
+
+import './api/mock'
+//使用--import { getUrl } from '../api/index'
 
 import 'ant-design-vue/dist/antd.css'
 import 'vxe-table/lib/style.css'
