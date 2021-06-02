@@ -1,11 +1,11 @@
 /*
- * @Description: Helper function
- * @Author: lfy
- * @Date: 2020-12-09 17:23:59
- * @LastEditTime: 2020-12-21 18:05:15
- * @LastEditors: lfy
+ * @Author: your name
+ * @Date: 2021-04-19 16:55:19
+ * @LastEditTime: 2021-05-31 17:18:43
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \ABA\src\router\router.ts
  */
-
 import { createRouter, createWebHistory } from 'vue-router'
 import store from '../store/store'
 import HelloWorld from '../components/HelloWorld.vue'
@@ -53,6 +53,11 @@ const router = createRouter({
           path: "/ps-layout",
           name: 'ps-layout',
           component: () => import("../components/general/ps-layout/ast/ps-layout.vue"),
+        },
+        {
+          path: "/ps-picshow",
+          name: 'ps-picshow',
+          component: () => import("../components/general/ps-picshow/ast/ps-picshow.vue"),
         },
     ]
 })

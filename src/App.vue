@@ -2,23 +2,23 @@
  * @Description: 
  * @Author: lfy
  * @Date: 2020-12-09 15:10:23
- * @LastEditTime: 2020-12-21 13:28:05
- * @LastEditors: lfy
+ * @LastEditTime: 2021-05-31 17:08:08
+ * @LastEditors: Please set LastEditors
 -->
 <template>
-  <!-- <div class="container">
+  <div class="container">
     <router-view ref="global"></router-view> 
-  </div> -->
-  <ps-layout />
+  </div>
+  <!-- <ps-layout /> -->
 </template>
 
 <script lang="ts">
 import { ref } from "vue"
-import PsLayout from "./components/general/ps-layout/ast/ps-layout.vue"
+// import PsLayout from "./components/general/ps-layout/ast/ps-layout.vue"
 // import ColumnList, { ColumnProps } from './components/ColumnList.vue' 
 export default {
   components: {
-    PsLayout
+    // PsLayout
   },
   name: "App",
   setup() {

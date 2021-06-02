@@ -1,11 +1,12 @@
-import { NodePlopAPI } from 'plop';
-import routerGenerator from './plop-templates/router/prompt';
+import type { NodePlopAPI } from 'plop';
+//import componentGenerator from './plop-templates/component/prompt';
+const componentGenerator = require('./plop-templates/component/prompt');
 // const routerGenerator = require('./plop-templates/router/prompt');
 // const viewGenerator = require('./plop-templates/view/prompt');
 
 export default function (plop: NodePlopAPI){
   //plop generator code
-  plop.setGenerator('controller', routerGenerator)
+  plop.setGenerator('router', componentGenerator)
 }
 // const componentGenerator = require('./plop-templates/component/prompt');
 
