@@ -81,7 +81,7 @@
 
 <script lang='ts'>
 import { defineComponent, reactive, onMounted, nextTick, computed, ref } from 'vue'
-import useMousePosition from '../hooks/useMousePosition'
+import useMousePosition from '../../hooks/useMousePosition'
 
 export default defineComponent({
   name: 'FloorPlanPlus', 

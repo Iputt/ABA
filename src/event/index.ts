@@ -20,14 +20,12 @@ let instance = new Emitter();
 /**
  * 事件中心提供者
  * @param key 事件key值 默认为全局key
- * @param global 是否使用全局事件中心 默认true
  */
-export const providerEmitter = (key = globalKey, global = true) => {
-  if(!global && key !== globalKey) {
+export const providerEmitter = (key = globalKey) => {
+  if(key !== globalKey) {
     provide(key, new Emitter());
   }else {
     provide(key, instance);
-    //globalKey = key;
   }
 }
 

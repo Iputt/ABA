@@ -77,13 +77,15 @@
 
 <script lang='ts'>
 import { defineComponent, reactive, onMounted, nextTick, computed, ref } from 'vue'
-import useMousePosition from '../hooks/useMousePosition'
+import useMousePosition from '../../hooks/useMousePosition'
+import { useEmitter } from '../../event'
 
 export default defineComponent({
   name: 'FloorPlan', 
   props: {
   },
   setup(){
+    const emitter: any = useEmitter();
     let sourceData = reactive([
       {"ID":"Cnaa4fWU","Name":"玄关","Polygon":[{"X":-534.0,"Y":-59.0},{"X":-670.0,"Y":-59.0},{"X":-670.0,"Y":96.0},{"X":-534.0,"Y":96.0}]},
       {"ID":"iTvzINKs","Name":"客餐厅","Polygon":[{"X":-37.0,"Y":-581.0},{"X":-534.0,"Y":-581.0},{"X":-534.0,"Y":96.0},{"X":-37.0,"Y":96.0}]},
@@ -107,9 +109,13 @@ export default defineComponent({
     let {x, y} = useMousePosition();
 
     onMounted(() => {
+      emitter.on('getuseinfo', handleEmitter)
       handleSourceData();
       highlight.value = 'dvXiP3AN'
     })
+    const handleEmitter = (val: number) => {
+      console.log("通过emitter获取数据：", val)
+    }
 
     let viewerStyle: any = computed(() => {
       let _x = x.value || 800;

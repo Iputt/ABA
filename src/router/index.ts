@@ -22,7 +22,7 @@ const router = createRouter({
     {
       path: "/ps-avatar",
       name: 'ps-avatar',
-      component: () => import("../components/general/ps-alert/ast/ps-alert.vue"),
+      component: () => import("../components/general/ps-alert/template/ps-alert.vue"),
     },
   ]
 })

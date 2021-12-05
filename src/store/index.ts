@@ -1,32 +1,39 @@
 /*
- * @Description: 全局状态管理
+ * @Description: 全局状态
  * @Author: lfy
  * @Date: 2021-12-05 17:27:36
  * @LastEditTime: 2021-12-05 17:27:36
  * @LastEditors: Please set LastEditors
  */
-import { reactive, readonly } from 'vue';
+import { store } from './store'
+import { authorityStore } from './module/authority'
+import { provide, inject } from '@vue/runtime-core';
 
-const state = reactive({
-  currentStatus: 'login', //当前状态
-})
 
-const getters = reactive({
-  //获取当前状态
-  get getCurrentStatus() {
-    return state.currentStatus;
-  },
-})
-
-const mutations = {
-  //改变当前状态
-  changeCurrentStatus: (_val: string) => {
-    state.currentStatus = _val;
-  }
+const STOREMODULE: any = {
+  store,
+  authorityStore
 }
 
-export const store = readonly({
-  state,
-  getters,
-  ...mutations
-})
+/**
+ * 模块名常量定义
+ */
+export const STOREMODULETAG = {
+  STORE: 'store',
+  AUTHORITYSTORE: 'authorityStore'
+}
+
+/**
+ * 全局状态提供者
+ */
+export const provideStore = (key = STOREMODULETAG.STORE) => {
+  provide(key, STOREMODULE[key]);
+} 
+
+/**
+ * 注入全局状态
+ * @returns 
+ */
+export const useStore = (key = STOREMODULETAG.STORE) => {
+  return inject(key);
+}
