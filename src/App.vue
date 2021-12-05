@@ -1,27 +1,19 @@
-<!--
- * @Description: 
- * @Author: lfy
- * @Date: 2020-12-09 15:10:23
- * @LastEditTime: 2021-05-31 17:08:08
- * @LastEditors: Please set LastEditors
--->
 <template>
   <div class="container">
     <router-view ref="global"></router-view> 
   </div>
-  <!-- <ps-layout /> -->
 </template>
 
 <script lang="ts">
-import { ref } from "vue"
-// import PsLayout from "./components/general/ps-layout/ast/ps-layout.vue"
-// import ColumnList, { ColumnProps } from './components/ColumnList.vue' 
+import { onMounted, ref } from "vue"
+import api from './api/index'
 export default {
-  components: {
-    // PsLayout
-  },
   name: "App",
   setup() {
+    onMounted( async () => {
+      let userInfo = await api.getUserInfo();
+      console.log("获取数据：", userInfo);
+    })
     return {
     };
   },

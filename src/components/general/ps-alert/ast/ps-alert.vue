@@ -27,7 +27,6 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { SmileOutlined } from '@ant-design/icons-vue';
 
 const enum type {
   success,
@@ -39,7 +38,6 @@ const enum type {
 export default defineComponent({
   name: "ps-alert",
   components: {
-    SmileOutlined
   },
   props: {
     afterClose: {
