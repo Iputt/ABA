@@ -1,5 +1,5 @@
-import PsAlert from './general/ps-alert/tsx/ps-alert';
+import YsAlert from "./general/ys-alert"
 
 export {
-  PsAlert
+  YsAlert
 }

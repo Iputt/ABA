@@ -1,7 +1,7 @@
-import { defineComponent, App } from 'vue';
+import { defineComponent } from 'vue';
 
-const {{cname}} = defineComponent({
-  name: '{{cname}}',
+const YsAlert = defineComponent({
+  name: '',
   props: {},
   setup() {
     return {};
@@ -15,4 +15,4 @@ const {{cname}} = defineComponent({
   },
 })
 
-export default {{cname}}
+export default YsAlert

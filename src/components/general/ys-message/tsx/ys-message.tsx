@@ -1,7 +1,7 @@
 import { defineComponent, App } from 'vue';
 
-const PsAlert = defineComponent({
-  name: '',
+const YsMessage = defineComponent({
+  name: 'YsMessage',
   props: {},
   setup() {
     return {};
@@ -14,8 +14,5 @@ const PsAlert = defineComponent({
     );
   },
 })
-PsAlert.install = function(app: App) {
-  app.component(PsAlert.name, PsAlert);
-  return app;
-};
-export default PsAlert
+
+export default YsMessage

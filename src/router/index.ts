@@ -7,7 +7,6 @@
  * @FilePath: \ABA\src\router\router.ts
  */
 import { createRouter, createWebHistory } from 'vue-router'
-import { store } from '../store'
 import HelloWorld from '../components/HelloWorld.vue'
 
 const routerHistory = createWebHistory()
@@ -22,7 +21,7 @@ const router = createRouter({
     {
       path: "/ps-avatar",
       name: 'ps-avatar',
-      component: () => import("../components/general/ps-alert/template/ps-alert.vue"),
+      component: () => import("../components/general/ys-alert/sfc/ys-alert.vue"),
     },
   ]
 })

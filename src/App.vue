@@ -1,7 +1,8 @@
 <template>
-  <div class="container">
+  <!-- <div class="container">
     <router-view ref="global"></router-view> 
-  </div>
+  </div> -->
+  <ys-alert message="这是一条提示信息"></ys-alert>
 </template>
 
 <script lang="ts">
@@ -9,9 +10,13 @@ import { onMounted } from "vue"
 import api from './api/index'
 import { providerEmitter } from './event'
 import { provideStore, STOREMODULETAG } from './store'
+import { YsAlert } from '@/components'
 
 export default {
   name: "App",
+  components: {
+    YsAlert,
+  },
   setup() {
     providerEmitter();
     provideStore();
