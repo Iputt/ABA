@@ -1,7 +1,7 @@
 import { defineComponent, App } from 'vue';
 
-const {{cname}} = defineComponent({
-  name: '{{cname}}',
+const YsMessage = defineComponent({
+  name: 'YsMessage',
   props: {},
   setup() {
     return {};
@@ -15,4 +15,4 @@ const {{cname}} = defineComponent({
   },
 })
 
-export default {{cname}}
+export default YsMessage

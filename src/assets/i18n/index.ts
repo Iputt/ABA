@@ -6,15 +6,15 @@
  * @LastEditors: lfy
  */
 import { createI18n } from 'vue-i18n'
-import zhCN from 'vxe-table/lib/locale/lang/zh-CN'
-import enUS from 'vxe-table/lib/locale/lang/en-US'
+// import zhCN from 'vxe-table/lib/locale/lang/zh-CN'
+// import enUS from 'vxe-table/lib/locale/lang/en-US'
 
 const messages = {
     zh: {
-        ...zhCN
+        // ...zhCN
     },
     en: {
-        ...enUS
+        // ...enUS
     }
 }
 

@@ -10,8 +10,8 @@ module.exports = {
   }],
   actions: (data) => {// 这里可以通过data获取输入的name
     let name = data.name;
-    const tname = `ps-${data.name}`;
-    const cname = `Ps${name.charAt(0).toUpperCase() + name.slice(1)}`
+    const tname = `ys-${data.name}`;
+    const cname = `Ys${name.charAt(0).toUpperCase() + name.slice(1)}`
     console.log("name:",tname,cname)
     const actions = [
       {
@@ -44,7 +44,7 @@ module.exports = {
       },
       {
         type: 'add', // 操作类型 添加文件
-        path: `src/components/general/${tname}/ast/${tname}.vue`, //添加的文件的路径
+        path: `src/components/general/${tname}/sfc/${tname}.vue`, //添加的文件的路径
         templateFile: './plop-templates/component/hbs/template.hbs', //模版文件的路径
         data: {
           name

@@ -1,5 +1,5 @@
 /*
- * @Description: 全局状态管理
+ * @Description: 权限状态管理
  * @Author: lfy
  * @Date: 2021-12-05 17:27:36
  * @LastEditTime: 2021-12-05 17:27:36
@@ -8,24 +8,24 @@
 import { reactive, readonly } from 'vue';
 
 const state = reactive({
-  currentStatus: 'login', //当前状态
+  canEdit: false, //是否能编辑
 })
 
 const getters = reactive({
-  //获取当前状态
-  get getCurrentStatus() {
-    return state.currentStatus;
+  //获取当前编辑权限
+  get getCanEdit() {
+    return state.canEdit;
   },
 })
 
 const mutations = {
-  //改变当前状态
-  changeCurrentStatus: (_val: string) => {
-    state.currentStatus = _val;
+  //改变编辑权限
+  changeCanEdit: (_val: boolean) => {
+    state.canEdit = _val;
   }
 }
 
-export const store = readonly({
+export const authorityStore = readonly({
   state,
   getters,
   ...mutations

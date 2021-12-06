@@ -1,27 +1,34 @@
-<!--
- * @Description: 
- * @Author: lfy
- * @Date: 2020-12-09 15:10:23
- * @LastEditTime: 2021-05-31 17:08:08
- * @LastEditors: Please set LastEditors
--->
 <template>
-  <div class="container">
+  <!-- <div class="container">
     <router-view ref="global"></router-view> 
-  </div>
-  <!-- <ps-layout /> -->
+  </div> -->
+  <ys-alert message="这是一条提示信息"></ys-alert>
 </template>
 
 <script lang="ts">
-import { ref } from "vue"
-// import PsLayout from "./components/general/ps-layout/ast/ps-layout.vue"
-// import ColumnList, { ColumnProps } from './components/ColumnList.vue' 
+import { onMounted } from "vue"
+import api from './api/index'
+import { providerEmitter } from './event'
+import { provideStore, STOREMODULETAG } from './store'
+import { YsAlert } from '@/components'
+
 export default {
-  components: {
-    // PsLayout
-  },
   name: "App",
+  components: {
+    YsAlert,
+  },
   setup() {
+    providerEmitter();
+    provideStore();
+    provideStore(STOREMODULETAG.AUTHORITYSTORE);
+    onMounted( async () => {
+      let userInfo = await api.getUserInfo();
+      console.log("获取数据：", userInfo);
+    })
+
+    const handleUserInfo = (val: number) => {
+      console.log('处理用户信息', val);
+    }
     return {
     };
   },
@@ -36,5 +43,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 </style>
