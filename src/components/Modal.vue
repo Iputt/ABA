@@ -11,6 +11,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  name: 'Modal',
   props:{
     isOpen: Boolean,
   },
