@@ -1,5 +1,5 @@
-const componentGenerator = require('./plop-templates/component/prompt');
+const componentGenerator = require('./plop-templates/component/prompt')
 
 module.exports = function (plop) {
-    plop.setGenerator('router', componentGenerator);
-};
+  plop.setGenerator('component', componentGenerator)
+}

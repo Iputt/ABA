@@ -8,22 +8,12 @@
  */
 import { createRouter, createWebHistory } from 'vue-router'
 import HelloWorld from '../components/HelloWorld.vue'
+import routes from './router'
 
 const routerHistory = createWebHistory()
 const router = createRouter({
   history: routerHistory,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HelloWorld
-    },
-    {
-      path: "/ps-avatar",
-      name: 'ps-avatar',
-      component: () => import("../components/general/ys-alert/sfc/ys-alert.vue"),
-    },
-  ]
+  routes: routes
 })
 
 //路由导航守卫
@@ -37,7 +27,5 @@ const router = createRouter({
 //isAuthenticated
 //router.beforeEach(() => store.state.user.isLogin);
 
-
-export default router;
+export default router
 //const route = useRoute();
-

@@ -35,7 +35,8 @@
     // "tests/**/*.ts",
     // "tests/**/*.tsx",
     "src/**/*.d.ts",
-    "plop-template/**/**/*.ts"
+    "plop-template/**/**/*.ts",
+    "public/sdk/**/*.ts"
 , "mock/mock.ts"  ],
   "exclude": [
     "node_modules",
