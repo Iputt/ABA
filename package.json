@@ -30,6 +30,7 @@
     "rellax": "^1.12.1",
     "svg-mesh-3d": "^1.1.0",
     "svgjs": "^2.6.2",
+    "three": "^0.137.5",
     "vue": "^3.2.23",
     "vue-content-loader": "^2.0.1",
     "vue-i18n": "^9.2.0-beta.23",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.11",
+    "@types/three": "^0.137.0",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "@vitejs/plugin-vue": "^1.10.1",
