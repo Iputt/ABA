@@ -2,37 +2,28 @@
   <!-- <div class="container">
     <router-view ref="global"></router-view> 
   </div> -->
-  <ys-alert message="这是一条提示信息"></ys-alert>
+  <!-- <ys-progress></ys-progress> -->
+  <ys-upload></ys-upload>
 </template>
 
-<script lang="ts">
-import { onMounted } from "vue"
+<script lang="ts" setup>
 import api from './api/index'
 import { providerEmitter } from './event'
 import { provideStore, STOREMODULETAG } from './store'
-import { YsAlert } from '@/components'
+import YsUpload from './components/general/ys-upload/sfc/ys-upload.vue';
 
-export default {
-  name: "App",
-  components: {
-    YsAlert,
-  },
-  setup() {
-    providerEmitter();
-    provideStore();
-    provideStore(STOREMODULETAG.AUTHORITYSTORE);
-    onMounted( async () => {
-      let userInfo = await api.getUserInfo();
-      console.log("获取数据：", userInfo);
-    })
+providerEmitter();
+provideStore();
+provideStore(STOREMODULETAG.AUTHORITYSTORE);
+onMounted( async () => {
+  let userInfo = await api.getUserInfo();
+  console.log("获取数据：", userInfo);
+})
 
-    const handleUserInfo = (val: number) => {
-      console.log('处理用户信息', val);
-    }
-    return {
-    };
-  },
-};
+const handleUserInfo = (val: number) => {
+  console.log('处理用户信息', val);
+}
+
 </script>
 
 <style>
@@ -42,7 +33,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   display: flex;
   justify-content: center;
   align-content: center;

@@ -8,6 +8,8 @@ declare module 'vue' {
     Modal: typeof import('./components/Modal.vue')['default']
     YsAlert: typeof import('./components/general/ys-alert/sfc/ys-alert.vue')['default']
     YsMessage: typeof import('./components/general/ys-message/sfc/ys-message.vue')['default']
+    YsProgress: typeof import('./components/general/ys-progress/sfc/ys-progress.vue')['default']
+    YsUpload: typeof import('./components/general/ys-upload/sfc/ys-upload.vue')['default']
   }
 }
 

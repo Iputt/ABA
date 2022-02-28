@@ -10,10 +10,19 @@ import { Get, Post, Put, Patch, Delete } from './request'
 export default {
   /**
    * 获取用户信息
-   * @param params 
-   * @returns 
+   * @param params
+   * @returns
    */
   getUserInfo: () => {
     return Get('../../mock/static/user.json', null)
+  },
+
+  /**
+   * 上传文件
+   * @param form 数据
+   * @returns
+   */
+  uploadFile: (form: FormData) => {
+    return Post('./upload', form)
   }
 }

@@ -46,7 +46,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        javascriptEnabled: true
+        javascriptEnabled: true,
+        additionalData: '@import "@/assets/scss/global.scss";'
       }
     }
   },
@@ -54,6 +55,11 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     }
+  },
+  server: {
+    port: 2022,
+    host: '0.0.0.0',
+    open: '/index.html?you=good'
   },
   build: {
     sourcemap: true,
