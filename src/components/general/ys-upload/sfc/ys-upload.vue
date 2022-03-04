@@ -1,8 +1,7 @@
 <template>
-  <div ref="drag" class="drag">
+  <div ref="drag" class="drag" >
     <div class="drag-icon-box">
-      <!-- 采用的是 element-ui 的图标 -->
-      <i class="el-icon-upload"></i> 
+      <i class="icon-upload"></i> 
     </div>
     <div class="drag-message">
       <span class="drag-message-title">将文件拖动到此处，或</span>
@@ -18,6 +17,7 @@
       </label>
     </div>
   </div>
+  <ys-progress :percentage="uploadProgress"></ys-progress>
 </template>
 
 <script lang="ts" setup>
@@ -29,26 +29,31 @@ const props = defineProps({
   test: String
 });
 
+onMounted(() => {
+  bindEvents();
+})
+
 // expect emits options
 const emit = defineEmits(['update']);
 
 let fontSize = ref(14);
 const drag = ref();
 const file: any = ref(null);
+const uploadProgress = ref(0);
 
 const bindEvents = () => {
   //被拖动的对象进入目标容器
-  drag.value.addEventListener('dragover', e => {
+  drag.value.addEventListener('dragover', (e: any) => {
     e.preventDefault();
     drag.value.style.borderColor = 'red';
   })
   // 被拖动的对象离开目标容器
-  drag.value.addEventListener('dragleave', e => {
+  drag.value.addEventListener('dragleave', (e: any) => {
     e.preventDefault()
     drag.value.style.borderColor = '#eee'
   })
   // 被拖动的对象进入目标容器，释放鼠标键
-  drag.value.addEventListener('drop', e => {
+  drag.value.addEventListener('drop', (e: any) => {
     e.preventDefault()
     drag.value.style.borderColor = '#eee'
     const fileList = e.dataTransfer.files
@@ -77,7 +82,13 @@ const uploadFile = async () => {
   form.append('name', 'file');
   form.append('file', file.value);
   console.log('调用上传文件API')
-  //const res = await api.uploadFile(form);
+  // const res = await api.uploadFile(form, {
+  //   onUploadProgress: (progress: any) => {
+  //     uploadProgress.value = Number(
+  //       ((progress.loaded / progress.total) * 100).toFixed(2)
+  //     )
+  //   }
+  // });
 }
 
 </script>

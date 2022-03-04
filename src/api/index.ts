@@ -22,7 +22,7 @@ export default {
    * @param form 数据
    * @returns
    */
-  uploadFile: (form: FormData) => {
+  uploadFile: (form: FormData, option: object) => {
     return Post('./upload', form)
   }
 }
