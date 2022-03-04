@@ -1,22 +1,22 @@
-import HelloWorld from '../components/HelloWorld.vue'
+import HelloWorld from '../components/HelloWorld.vue';
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HelloWorld
+    component: HelloWorld,
   },
   {
     path: '/ys-alert',
     name: 'ys-alert',
-    component: () => import('../components/general/ys-alert/sfc/ys-alert.vue')
+    component: () => import('../components/general/ys-alert/sfc/ys-alert.vue'),
   },
   {
     path: '/ys-upload',
     component: () =>
       import('../components/general/ys-upload/sfc/ys-upload.vue'),
-    name: 'upload'
-  }
-]
+    name: 'upload',
+  },
+];
 
-export default routes
+export default routes;
