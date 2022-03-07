@@ -6,11 +6,15 @@
  * @Description: In User Settings Edit
  * @FilePath: \ABA\src\shims-vue.d.ts
  */
-declare module '*.vue' {
-  import type { DefineComponent } from 'vue'
-  const component: DefineComponent<{}, {}, any>
-  export default component
-}
-declare module 'mockjs'
-declare module 'swiper/vue'
+declare global {}
 
+//feature flags
+declare var __YSR__: boolean;
+
+declare module '*.vue' {
+  import type { DefineComponent } from 'vue';
+  const component: DefineComponent<{}, {}, any>;
+  export default component;
+}
+declare module 'mockjs';
+declare module 'swiper/vue';

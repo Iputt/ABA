@@ -17,6 +17,10 @@ const routes = [
       import('../components/general/ys-upload/sfc/ys-upload.vue'),
     name: 'upload',
   },
+  {
+    path: '/ys-message',
+    component: () => import('../components'),
+  },
 ];
 
 export default routes;

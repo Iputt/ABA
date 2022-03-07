@@ -3,7 +3,8 @@
     <router-view ref="global"></router-view> 
   </div> -->
   <!-- <ys-progress></ys-progress> -->
-  <ys-upload></ys-upload>
+  <!-- <ys-upload></ys-upload> -->
+  <ys-message></ys-message>
 </template>
 
 <script lang="ts" setup>
@@ -26,7 +27,8 @@ const handleUserInfo = (val: number) => {
 
 </script>
 
-<style>
+<style lang="scss">
+@import url('./main.scss');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
